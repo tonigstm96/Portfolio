@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Antonio Gutiérrez Simón">
+        <meta name="description" content="Contacto Toni Dev">
+        <title>ToniDev - Contacto</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="media/img/SoloLogo_Toni_dev.png" type="image/x-icon">
+        <link rel="stylesheet" href="styles/estilos.css">
+    </head>
+    <body>
+        <header>
+            <div class="contenedor-header">
+                <a href="index.html" class="logo"><img src="media/img/logo_Toni_dev.png" alt="Logo ToniDev"></a>              
+                <label for="menu-toggle" class="icono-menu">☰</label>
+                <input type="checkbox" id="menu-toggle" class="menu-oculto">               
+                <nav class="navegacion">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#sobre-mi">Sobre mí</a></li> 
+                        <li><a href="index.html#proyectos">Proyectos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="contacto-seccion">
+                <div class="proyectos-titulo">
+                    <h2>/CONTACTO/</h2>
+                </div>
+                <form action="#" method="POST" class="formulario-contacto">
+                    <div class="grid-form">
+                        <p>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </p>
+                        <p>
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido" required>
+                        </p>
+                        <p>
+                            <label for="correo">Correo</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </p>
+                        <p>
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </p>
+                    </div>                  
+                    <p class="mensaje">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </p>
+                    <button type="submit" class="boton-enviar">Enviar</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-img">
+                <img src="media/img/logo_Toni_dev.png" alt="Logo ToniDev">
+            </div>      
+            <div class="footer-div">    
+                <nav class="nav-footer">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#sobre-mi">Sobre mí</a></li> 
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="redes">
+                    <ul>
+                        <li><img src="media/img/instagram.svg" alt="Icono instagram"></li>
+                        <li><img src="media/img/twitter.svg" alt="Icono twitter"></li>
+                        <li><a href="https://github.com/tonigstm96"><img src="media/img/github.svg" alt="Icono github"></a></li>
+                    </ul>
+                </div>
+                <h5>2026 © Antonio Gutiérrez Simón</h5>
+            </div>
+        </footer>
+    </body>
+</html>

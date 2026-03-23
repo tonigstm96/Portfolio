@@ -1,0 +1,609 @@
+/*Paleta de colores: https://color.adobe.com/es/trends/Ui/ux */
+/*Selector virgulilla:  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator*/
+/*Box sizing: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing*/
+/*Checkbox hack: https://css-tricks.com/the-checkbox-hack/*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body{
+    background-color: #132426;
+    color: #f5f5f5;  
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    display: block;
+}
+
+.titulo-verde{
+    color: #05F26C;
+}
+
+.titulo-verde-oscuro{
+    color: #0A5926
+}
+
+header{
+    background-color: #132426;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 15px;
+}
+
+.contenedor-header{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.logo img{
+    height: 40px;
+}
+
+.menu-oculto{
+    display: none;
+}
+
+.icono-menu{
+    font-size: 2rem;
+    cursor: pointer;
+    color: #05F26C;
+    display: block;
+}
+
+.navegacion{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    display: none;
+    background-color:#132426;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #08401B;
+    border-bottom: 2px solid #05F26C;
+    z-index: 2000;
+}
+
+.menu-oculto:checked ~ .navegacion{
+    display: block;
+}
+
+.navegacion ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navegacion a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.navegacion a:hover{
+    color: #05F26C;
+    font-weight: bold;
+}
+
+section{
+    padding: 2rem 1rem;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 1.4rem;
+}
+
+.experiencia h2, .estudios h2, .proyectos-titulo h2{
+    display: inline-block;
+    background: linear-gradient(to bottom, transparent 35%, #0a5926 35%);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.7rem;
+}
+
+h3{
+    font-size: 1.2rem;
+}
+
+.quien-soy{
+    text-align: center;
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+}
+
+.quien-soy-img img{
+    justify-self: center;
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    overflow: visible;
+}
+
+.tecnologias ul{
+    background-color: #0A5926;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: 1rem;
+}
+
+.tecnologias ul li{
+    background-color: #0A5926;
+    color: #05F26C;
+    border: 1px solid #03A64A;
+    padding: 8px 12px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.sobre-mi{
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+    margin-top: -2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.sobre-mi-izqda{
+    grid-row: 2;
+    justify-items: center;
+    margin-top: 1rem;
+}
+
+.sobre-mi-izqda ul li{
+    display: grid;
+    grid-template-columns: 1fr 7fr 2fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.sobre-mi-izqda ul li img{
+    width: 2rem;
+    grid-column: 1;
+    justify-self: start;
+}
+
+.sobre-mi-izqda ul li span{
+    grid-column: 2;
+}
+
+.sobre-mi-dcha{
+    grid-row: 1;
+}
+
+.sobre-mi-dcha h2{
+    justify-self: center;
+    padding-bottom: 1rem;
+}
+
+.exp-est{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+}
+
+.experiencia{
+    grid-column: 1;
+}
+
+.experiencia h2{
+    margin-bottom: 1rem;
+}
+
+.experiencia ul li, .estudios ul li{
+    margin-top: 1rem;
+}
+
+.experiencia ul li h4, .experiencia ul li p, .estudios ul li h4, .estudios ul li p, .sobre-mi-dcha p{
+    font-weight: 300;
+}
+
+.estudios{
+    grid-column: 2;
+    margin-bottom: 1rem;
+    align-self: center;
+}
+
+.estudios h2{
+    margin-bottom: 1rem;
+}
+
+.proyectos-titulo{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.proyectos{
+    display: grid;
+    grid-template-columns: auto auto;
+    border-bottom: solid 1px #03A64A;
+    gap: 1rem;
+}
+
+.proyectos-card img{
+    width: 45vw;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.proyectos-card p{
+    font-weight: 300;
+}
+
+.footer-img{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-img img{
+    height: 40px;
+}
+
+.footer-div{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.nav-footer ul{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    margin: 1rem;
+}
+
+.nav-footer ul li, .redes ul li{
+    justify-self: center;
+}
+
+.nav-footer ul li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.redes ul{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    margin: 1rem;
+}
+
+.redes ul li:first-child{
+    justify-self: end;
+}
+
+.redes ul li:last-child{
+    justify-self: start;
+}
+
+.redes ul li img{
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: #05F26C;
+}
+
+.footer-div h5{
+    justify-self: center;
+    margin-top: 1rem;
+}
+
+.contacto-seccion{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.formulario-contacto{
+    margin-top: 3rem;
+}
+
+.grid-form{
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+}
+
+.formulario-contacto p{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario-contacto label{
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.formulario-contacto input, .formulario-contacto textarea{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #03A64A;
+    color: white;
+    padding: 10px 0;
+    font-size: 1rem;
+    outline: none;
+}
+
+.formulario-contacto input:focus, .formulario-contacto textarea:focus{
+    border-bottom: 2px solid #05F26C; 
+}
+
+.mensaje{
+    margin-top: 2.5rem;
+}
+
+.boton-enviar, .boton-github{
+    background-color: #05F26C;
+    color: #132426;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: transform 0.2s;
+}
+
+.boton-enviar:hover, .boton-github:hover{
+    transform: scale(1.05);
+    background-color: #03A64A;
+}
+
+.detalle-seccion{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.img-principal img{
+    width: 100%;
+    border-radius: 25px;
+    margin: 2rem 0;
+}
+
+.descripcion-proyecto{
+    margin: 2rem 0;
+    font-weight: 300; 
+}
+
+.contenedor-boton{
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.galeria-capturas{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.galeria-capturas img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@media (min-width: 768px){
+    
+    .icono-menu{
+        display: none;
+    }
+    .navegacion{
+        position: static;
+        display: block;
+        width: auto;
+        border: none;
+    }
+    .navegacion ul{ 
+        flex-direction: row; 
+    }
+
+    .quien-soy{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .quien-soy-texto{
+        grid-column: 1;
+        grid-row: 1;
+        align-self: start;
+    }
+
+    .quien-soy-img{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .quien-soy-img img{
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .tecnologias{
+        grid-column: span 2;
+    }
+    
+    .sobre-mi{
+        grid-template-columns: auto auto;
+        align-items: center;
+    }
+
+    .sobre-mi-izqda{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .sobre-mi-dcha{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .nav-footer{
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-footer ul li{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .redes{
+        display: flex;
+        justify-content: center;
+    }
+
+    .redes ul li{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .img-principal, .descripcion-proyecto, .galeria-capturas{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+}
+
+@media (min-width: 1024px){
+
+    .quien-soy {
+        width: 90%; 
+        display: grid;
+        grid-template-columns: 1fr 2fr; 
+        align-items: center;  
+    }
+
+    .quien-soy-texto{
+        text-align: left;
+        justify-self: end;
+    }
+
+    .quien-soy-texto h1{
+        font-size: 3rem;
+    }
+
+    .quien-soy-texto h2{
+        font-size: 2.5rem;
+    }
+
+    .quien-soy-img{
+        justify-self: start; 
+        margin-left: 5rem;
+    }
+
+    .quien-soy-img img{
+        width: 40rem; 
+        height: 40rem;
+        overflow: visible;
+    }
+
+    .tecnologias {
+        grid-column: span 2;
+        width: 97.5vw;
+    }
+    
+    .tecnologias ul {
+        justify-content: center;
+        padding: 1rem;
+        gap: 6rem;
+    }
+
+    .tecnologias ul li {
+        padding: 0.8rem;
+        border-radius: 20px;
+        font-size: 2rem;
+    }
+
+    .sobre-mi, .exp-est {
+        margin-top: 3rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+
+    .sobre-mi{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    .sobre-mi-dcha {
+        font-size: 1.5rem;
+    }
+
+    .sobre-mi-izqda {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .sobre-mi-izqda ul li img{
+        width: 5rem;
+    }
+
+    .exp-est div ul li p{
+        font-size: 1.5rem;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    .grid-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mensaje, .boton-enviar {
+        grid-column: span 2;
+    }
+
+    .proyectos {
+        gap: 2rem;
+        padding-left: 6rem;
+    }
+
+    .proyectos-titulo{
+        margin-bottom: 2rem;
+    }
+    
+    .proyectos-card img {
+        object-fit: cover;
+        width: 40vw;
+        border-radius: 35px;
+    }
+
+    .galeria-capturas {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}     
