@@ -12,6 +12,12 @@
 body {
   background-color: #132426;
   color: #f5f5f5;
+  background-image: radial-gradient(
+    circle 600px at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(5, 242, 108, 0.04),
+    transparent 80%
+  );
+  background-attachment: scroll;
 }
 
 ul {
