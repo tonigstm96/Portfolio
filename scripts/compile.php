@@ -1,6 +1,5 @@
 <?php
 /**
- * Script de compilación estática para el portafolio (1º DAW).
  * Convierte archivos .php a .html y reescribe los enlaces internos.
  */
 
@@ -82,7 +81,7 @@ function copyDirectory($src, $dst) {
 }
 
 // 4. Copiar directorios estáticos si existen
-$staticDirs = ['style', 'styles', 'media', 'views'];
+$staticDirs = ['style', 'styles', 'media', 'views', 'js'];
 foreach ($staticDirs as $dir) {
     if (is_dir($sourceDir . '/' . $dir)) {
         echo "Copiando carpeta estática: $dir/...\n";
