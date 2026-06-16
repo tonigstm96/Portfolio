@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Antonio Gutiérrez Simón" />
+    <meta name="description" content="Portfolio Toni Dev" />
+    <title>ToniDev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="media/img/SoloLogo_Toni_dev.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="contenedor-header">
+        <a href="index.html" class="logo"
+          ><img src="media/img/logo_Toni_dev.png" alt="Logo ToniDev"
+        /></a>
+        <label for="menu-toggle" class="icono-menu">☰</label>
+        <input type="checkbox" id="menu-toggle" class="menu-oculto" />
+        <nav class="navegacion">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="index.html#proyectos">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="detalle-seccion">
+        <div class="proyectos-titulo">
+          <h2>/DOCKER MEDIA LAB/</h2>
+        </div>
+        <div class="img-principal">
+          <img
+            src="media/img/proyecto-docker.png"
+            alt="Captura principal del proyecto"
+          />
+        </div>
+        <article class="descripcion-proyecto">
+          <p>
+            Implementación de un entorno de servidor doméstico (HomeLab)
+            utilizando Docker y Docker Compose. El objetivo fue centralizar
+            servicios de streaming multimedia y gestión de archivos en un
+            contenedor ligero, garantizando la portabilidad y la facilidad de
+            despliegue mediante infraestructura como código.
+          </p>
+        </article>
+        <div class="contenedor-boton">
+          <a href="https://github.com/tonigstm96" class="boton-github"
+            >Ver repositorio GitHub</a
+          >
+        </div>
+        <div class="galeria-capturas">
+          <img src="media/img/captura1.png" alt="Captura 1" />
+          <img src="media/img/captura2.png" alt="Captura 2" />
+          <img src="media/img/captura3.png" alt="Captura 3" />
+          <img src="media/img/captura4.png" alt="Captura 4" />
+        </div>
+        <article class="descripcion-proyecto">
+          <p>
+            Logré automatizar el despliegue de Jellyfin, Sonarr y un servidor de
+            archivos, reduciendo el tiempo de configuración de horas a minutos.
+            Este proyecto me permitió dominar redes internas de Docker,
+            volúmenes persistentes y la gestión de permisos en entornos Linux
+            (Bash).
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-img">
+        <a href="index.html">
+          <img src="media/img/logo_Toni_dev.png" alt="Logo ToniDev" />
+        </a>
+      </div>
+      <div class="footer-div">
+        <nav class="nav-footer">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="index.html#proyectos">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="redes">
+          <ul>
+            <li><img src="media/img/instagram.svg" alt="Icono instagram" /></li>
+            <li><img src="media/img/twitter.svg" alt="Icono twitter" /></li>
+            <li>
+              <a href="https://github.com/tonigstm96"
+                ><img src="media/img/github.svg" alt="Icono github"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <h5>2026 © Antonio Gutiérrez Simón</h5>
+      </div>
+    </footer>
+  </body>
+</html>
