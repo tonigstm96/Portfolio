@@ -1,7 +1,13 @@
 /*Paleta de colores: https://color.adobe.com/es/trends/Ui/ux */
-/*Selector virgulilla:  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator*/
-/*Box sizing: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing*/
-/*Checkbox hack: https://css-tricks.com/the-checkbox-hack/*/
+html {
+  scroll-behavior: smooth;
+}
+
+#sobre-mi,
+#proyectos {
+  scroll-margin-top: 80px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -170,6 +176,21 @@ h3 {
   font-size: 1rem;
   font-weight: 900;
   text-align: center;
+  transition:
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  cursor: default;
+}
+
+.tecnologias ul li:hover {
+  transform: translateY(-5px) scale(1.08);
+  background-color: #05f26c;
+  color: #132426;
+  border-color: #05f26c;
+  box-shadow: 0 5px 15px rgba(5, 242, 108, 0.3);
 }
 
 .sobre-mi {
@@ -192,15 +213,58 @@ h3 {
   grid-template-columns: 1fr 7fr 2fr;
   gap: 1rem;
   align-items: center;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s ease;
 }
 
-.sobre-mi-izqda ul li img {
-  width: 2rem;
+.icono-habilidad {
+  display: inline-block;
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: #05f26c;
   grid-column: 1;
   justify-self: start;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
-.sobre-mi-izqda ul li span {
+.icono-habilidad.fullstack {
+  -webkit-mask-image: url("../media/img/fullstack.svg");
+  mask-image: url("../media/img/fullstack.svg");
+}
+
+.icono-habilidad.sysadmin {
+  -webkit-mask-image: url("../media/img/sysadmin.svg");
+  mask-image: url("../media/img/sysadmin.svg");
+}
+
+.icono-habilidad.container {
+  -webkit-mask-image: url("../media/img/container.svg");
+  mask-image: url("../media/img/container.svg");
+}
+
+.icono-habilidad.game {
+  -webkit-mask-image: url("../media/img/game.svg");
+  mask-image: url("../media/img/game.svg");
+}
+
+.sobre-mi-izqda ul li:hover {
+  color: #05f26c;
+}
+
+.sobre-mi-izqda ul li:hover .icono-habilidad {
+  background-color: #ffffff;
+  transform: scale(1.15) rotate(5deg);
+}
+
+.sobre-mi-izqda ul li span:not(.icono-habilidad) {
   grid-column: 2;
 }
 
@@ -229,13 +293,38 @@ h3 {
 
 .experiencia ul li,
 .estudios ul li {
-  margin-top: 1rem;
+  margin-bottom: 2.2rem;
+}
+
+.experiencia ul li:last-child,
+.estudios ul li:last-child {
+  margin-bottom: 0;
 }
 
 .experiencia ul li h4,
+.estudios ul li h4 {
+  color: #05f26c;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.experiencia ul li h3,
+.estudios ul li h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
 .experiencia ul li p,
-.estudios ul li h4,
-.estudios ul li p,
+.estudios ul li p {
+  font-weight: 300;
+  color: #a3b8b5;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .sobre-mi-dcha p {
   font-weight: 300;
 }
@@ -254,6 +343,8 @@ h3 {
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
 }
 
 .proyectos {
@@ -261,16 +352,44 @@ h3 {
   grid-template-columns: auto auto;
   border-bottom: solid 1px #03a64a;
   gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.proyectos-card a {
+  display: block;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 0.8rem;
 }
 
 .proyectos-card img {
   width: 45vw;
   border-radius: 15px;
-  margin-bottom: 1rem;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.proyectos-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+  transition: color 0.3s ease;
 }
 
 .proyectos-card p {
   font-weight: 300;
+  color: #a3b8b5;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.proyectos-card:hover img {
+  transform: scale(1.05);
+}
+
+.proyectos-card:hover h3 {
+  color: #05f26c;
 }
 
 .footer-img {
@@ -326,6 +445,17 @@ h3 {
   padding: 0.5rem;
   border-radius: 50%;
   background-color: #05f26c;
+  transition:
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.redes ul li img:hover {
+  transform: translateY(-5px) scale(1.15);
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(5, 242, 108, 0.4);
 }
 
 .footer-div h5 {
@@ -605,8 +735,9 @@ h3 {
     font-weight: 700;
   }
 
-  .sobre-mi-izqda ul li img {
-    width: 5rem;
+  .sobre-mi-izqda ul li .icono-habilidad {
+    width: 3.5rem;
+    height: 3.5rem;
   }
 
   .exp-est div ul li p {
@@ -629,16 +760,26 @@ h3 {
   .proyectos {
     gap: 2rem;
     padding-left: 6rem;
+    padding-bottom: 4.5rem;
   }
 
   .proyectos-titulo {
-    margin-bottom: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .proyectos-card a {
+    border-radius: 35px;
   }
 
   .proyectos-card img {
     object-fit: cover;
     width: 40vw;
     border-radius: 35px;
+  }
+
+  .proyectos-card h3 {
+    font-size: 1.4rem;
   }
 
   .galeria-capturas {

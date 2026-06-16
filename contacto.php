@@ -152,7 +152,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </main>
     <footer>
       <div class="footer-img">
-        <img src="media/img/logo_Toni_dev.png" alt="Logo ToniDev" />
+        <a href="index.html">
+          <img src="media/img/logo_Toni_dev.png" alt="Logo ToniDev" />
+        </a>
       </div>
       <div class="footer-div">
         <nav class="nav-footer">
