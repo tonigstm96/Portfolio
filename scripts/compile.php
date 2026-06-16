@@ -84,7 +84,7 @@ function copyDirectory($src, $dst)
 }
 
 // 4. Copiar directorios estáticos si existen
-$staticDirs = ['style', 'styles', 'media', 'views', 'js'];
+$staticDirs = ['styles', 'media', 'js'];
 foreach ($staticDirs as $dir) {
     if (is_dir($sourceDir . '/' . $dir)) {
         echo "Copiando carpeta estática: $dir/...\n";
