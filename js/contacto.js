@@ -90,11 +90,15 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.hostname === "localhost" ||
         window.location.hostname === "127.0.0.1";
 
-      if (isLocal) {
+      if (isLocal && window.location.pathname.endsWith(".php")) {
         showSuccessAlert(() => {
           const jsValInput = document.getElementById("js_validated");
           if (jsValInput) jsValInput.value = "1";
           form.submit();
+        });
+      } else if (isLocal) {
+        showSuccessAlert(() => {
+          form.reset();
         });
       } else {
         const submitBtn = form.querySelector(".boton-enviar");
