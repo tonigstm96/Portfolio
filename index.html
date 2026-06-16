@@ -1,184 +1,238 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Antonio Gutiérrez Simón">
-    <meta name="description" content="Portfolio Toni Dev">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Antonio Gutiérrez Simón" />
+    <meta name="description" content="Portfolio Toni Dev" />
     <title>ToniDev</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="media/img/SoloLogo_Toni_dev.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles/estilos.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="media/img/SoloLogo_Toni_dev.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="styles/estilos.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="contenedor-header">
-            <a href="index.html" class="logo"><img src="media/img/logo_Toni_dev.png" alt="Logo ToniDev"></a>
-            <label for="menu-toggle" class="icono-menu">☰</label>
-            <input type="checkbox" id="menu-toggle" class="menu-oculto">
-            <nav class="navegacion">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#sobre-mi">Sobre mí</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="contenedor-header">
+        <a href="index.html" class="logo"
+          ><img src="media/img/logo_Toni_dev.png" alt="Logo ToniDev"
+        /></a>
+        <label for="menu-toggle" class="icono-menu">☰</label>
+        <input type="checkbox" id="menu-toggle" class="menu-oculto" />
+        <nav class="navegacion">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
-        <section class="quien-soy">
-            <div class="quien-soy-texto">
-                <h1>HOLA<span class="titulo-verde-oscuro">!</span></h1>
-                <h2>Soy &lt;b&gt;Toni&lt;/b&gt;</h2>
-                <h2><span class="titulo-verde">Full Stack Developer</span></h2>
-            </div>
-            <div class="quien-soy-img">
-                <img src="media/img/foto_toni_diseno.png" alt="Foto Tonidev">
-            </div>
-            <div class="tecnologias">
-                <ul>
-                    <li>Html</li>
-                    <li>Css</li>
-                    <li>Php</li>
-                    <li>Javascript</li>
-                    <li>Java</li>
-                    <li>Godot</li>
-                    <li>Docker</li>
-                    <li>MySql</li>
-                    <li>Bash</li>
-                    <li>Git</li>
-                </ul>
-            </div>
-        </section>
-        <section id="sobre-mi" class="sobre-mi">
-            <div class="sobre-mi-izqda">
-                <ul>
-                    <li>
-                        <img src="media/img/icono-dev.png" alt="Icono desarrollo backend">
-                        <span>Desarrollo Backend</span>
-                    </li>
-                    <li>
-                        <img src="media/img/icono-sys.png" alt="Icono administración de sistemas">
-                        <span>Administración de Sistemas</span>
-                    </li>
-                    <li>
-                        <img src="media/img/docker.svg" alt="Icono containerización">
-                        <span>Containerización</span>
-                    </li>
-                    <li>
-                        <img src="media/img/gamedev.svg" alt="Icono Game Dev">
-                        <span>Game Dev</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="sobre-mi-dcha">
-                <h2>SOBRE <span class="titulo-verde">{MI}</span></h2>
-                <p>Más allá de la maquetación, lo que realmente me mueve es la lógica y la infraestructura del software.
-                    Actualmente curso 1º de DAW, donde he descubierto que me siento más cómodo en la terminal que en las
-                    herramientas de diseño visual. Me apasiona utilizar Java para construir la lógica de las
-                    aplicaciones y dedico mi tiempo libre a experimentar con Docker y scripts en Bash para automatizar
-                    procesos y despliegues. Mi próximo objetivo es fusionar código y creatividad aprendiendo Godot para
-                    el desarrollo de mecánicas de videojuegos. Soy curioso por naturaleza: si algo funciona, necesito
-                    entender por qué; si no, investigo hasta solucionarlo.</p>
-            </div>
-        </section>
-        <section id="exp-est" class="exp-est">
-            <div id="experiencia" class="experiencia">
-                <h2>/EXPERIENCIA/</h2>
-                <ul>
-                    <li>
-                        <h4>2023 - 2024</h4>
-                        <h3>Ayuntamiento de Torrevieja - Trabajador Social</h3>
-                        <p>Gestión de expedientes y recursos sociales. Resolución de conflictos y atención directa al
-                            usuario. Desarrollo de habilidades comunicativas y gestión de situaciones bajo presión.</p>
-                    </li>
-                    <li>
-                        <h4>2020 - 2022</h4>
-                        <h3>Mercadona - Mozo de Almacén</h3>
-                        <p>Mercadona Logística y gestión de stock. Trabajo en equipo en entorno dinámico, cumplimiento
-                            de objetivos diarios y organización eficiente del espacio de trabajo.</p>
-                    </li>
-                </ul>
-            </div>
-            <div id="estudios" class="estudios">
-                <h2>/ESTUDIOS/</h2>
-                <ul>
-                    <li>
-                        <h4>2025 - 2027</h4>
-                        <h3>EFA El Campico - Grado Superior DAW</h3>
-                        <p>Desarrollo de Aplicaciones Web. Formación en Java, Bases de Datos, entornos de desarrollo y
-                            sistemas informáticos.</p>
-                    </li>
-                    <li>
-                        <h4>2021 - 2023</h4>
-                        <h3>Universidad de Murcia - Máster en Mediación</h3>
-                        <p>Especialización profesional en gestión y resolución extrajudicial de conflictos, negociación
-                            y comunicación estratégica.</p>
-                    </li>
-                    <li>
-                        <h4>2015 - 2019</h4>
-                        <h3>Universidad de Murcia - Grado en Trabajo social</h3>
-                        <p>Formación universitaria en ciencias sociales, intervención comunitaria, psicología aplicada y
-                            organización de recursos.</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <div class="proyectos-titulo">
-            <h2>/PROYECTOS/</h2>
+      <section class="quien-soy">
+        <div class="quien-soy-texto">
+          <h1>HOLA<span class="titulo-verde-oscuro">!</span></h1>
+          <h2>Soy &lt;b&gt;Toni&lt;/b&gt;</h2>
+          <h2><span class="titulo-verde">Full Stack Developer</span></h2>
         </div>
-        <section id="proyectos" class="proyectos">
-            <article class="proyectos-card">
-                <a href="proyecto-java.html"><img src="media/img/proyecto-java.png" alt="Proyecto Java"></a>
-                <h3>BankCLI System</h3>
-                <p>Gestión transaccional y de usuarios vía consola. Lógica en Java puro.</p>
-            </article>
-            <article class="proyectos-card">
-                <a href="proyecto-docker.html"><img src="media/img/proyecto-docker.png" alt="Proyecto Docker"></a>
-                <h3>Docker Media Lab</h3>
-                <p>Despliegue automatizado de Jellyfin y servicios de red con Docker Compose.</p>
-            </article>
-            <article class="proyectos-card">
-                <a href="proyecto-godot.html"><img src="media/img/proyecto-godot.png" alt="Proyecto Godot"></a>
-                <h3>Godot Gunsmith</h3>
-                <p>Prototipo de lógica de inventario y modificación de armas en tiempo real.</p>
-            </article>
-            <article class="proyectos-card">
-                <a href="proyecto-snippet.html"><img src="media/img/proyecto-snippet.png" alt="Proyecto Snippet"></a>
-                <h3>Snippet Vault</h3>
-                <p>Concepto de herramienta para almacenamiento y clasificación de código.</p>
-            </article>
-        </section>
+        <div class="quien-soy-img">
+          <img src="media/img/foto_toni_diseno.png" alt="Foto Tonidev" />
+        </div>
+        <div class="tecnologias">
+          <ul>
+            <li>Html</li>
+            <li>Css</li>
+            <li>Php</li>
+            <li>Javascript</li>
+            <li>Java</li>
+            <li>Godot</li>
+            <li>Docker</li>
+            <li>MySql</li>
+            <li>Bash</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </section>
+      <section id="sobre-mi" class="sobre-mi">
+        <div class="sobre-mi-izqda">
+          <ul>
+            <li>
+              <img
+                src="media/img/icono-dev.png"
+                alt="Icono desarrollo backend"
+              />
+              <span>Desarrollo Backend</span>
+            </li>
+            <li>
+              <img
+                src="media/img/icono-sys.png"
+                alt="Icono administración de sistemas"
+              />
+              <span>Administración de Sistemas</span>
+            </li>
+            <li>
+              <img src="media/img/docker.svg" alt="Icono containerización" />
+              <span>Containerización</span>
+            </li>
+            <li>
+              <img src="media/img/gamedev.svg" alt="Icono Game Dev" />
+              <span>Game Dev</span>
+            </li>
+          </ul>
+        </div>
+        <div class="sobre-mi-dcha">
+          <h2>SOBRE <span class="titulo-verde">{MI}</span></h2>
+          <p>
+            Más allá de la maquetación, lo que realmente me mueve es la lógica y
+            la infraestructura del software. Actualmente curso 1º de DAW, donde
+            he descubierto que me siento más cómodo en la terminal que en las
+            herramientas de diseño visual. Me apasiona utilizar Java para
+            construir la lógica de las aplicaciones y dedico mi tiempo libre a
+            experimentar con Docker y scripts en Bash para automatizar procesos
+            y despliegues. Mi próximo objetivo es fusionar código y creatividad
+            aprendiendo Godot para el desarrollo de mecánicas de videojuegos.
+            Soy curioso por naturaleza: si algo funciona, necesito entender por
+            qué; si no, investigo hasta solucionarlo.
+          </p>
+        </div>
+      </section>
+      <section id="exp-est" class="exp-est">
+        <div id="experiencia" class="experiencia">
+          <h2>/EXPERIENCIA/</h2>
+          <ul>
+            <li>
+              <h4>2023 - 2024</h4>
+              <h3>Ayuntamiento de Torrevieja - Trabajador Social</h3>
+              <p>
+                Gestión de expedientes y recursos sociales. Resolución de
+                conflictos y atención directa al usuario. Desarrollo de
+                habilidades comunicativas y gestión de situaciones bajo presión.
+              </p>
+            </li>
+            <li>
+              <h4>2020 - 2022</h4>
+              <h3>Mercadona - Mozo de Almacén</h3>
+              <p>
+                Mercadona Logística y gestión de stock. Trabajo en equipo en
+                entorno dinámico, cumplimiento de objetivos diarios y
+                organización eficiente del espacio de trabajo.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div id="estudios" class="estudios">
+          <h2>/ESTUDIOS/</h2>
+          <ul>
+            <li>
+              <h4>2025 - 2027</h4>
+              <h3>EFA El Campico - Grado Superior DAW</h3>
+              <p>
+                Desarrollo de Aplicaciones Web. Formación en Java, Bases de
+                Datos, entornos de desarrollo y sistemas informáticos.
+              </p>
+            </li>
+            <li>
+              <h4>2021 - 2023</h4>
+              <h3>Universidad de Murcia - Máster en Mediación</h3>
+              <p>
+                Especialización profesional en gestión y resolución
+                extrajudicial de conflictos, negociación y comunicación
+                estratégica.
+              </p>
+            </li>
+            <li>
+              <h4>2015 - 2019</h4>
+              <h3>Universidad de Murcia - Grado en Trabajo social</h3>
+              <p>
+                Formación universitaria en ciencias sociales, intervención
+                comunitaria, psicología aplicada y organización de recursos.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="proyectos-titulo">
+        <h2>/PROYECTOS/</h2>
+      </div>
+      <section id="proyectos" class="proyectos">
+        <article class="proyectos-card">
+          <a href="proyecto-java.html"
+            ><img src="media/img/proyecto-java.png" alt="Proyecto Java"
+          /></a>
+          <h3>BankCLI System</h3>
+          <p>
+            Gestión transaccional y de usuarios vía consola. Lógica en Java
+            puro.
+          </p>
+        </article>
+        <article class="proyectos-card">
+          <a href="proyecto-docker.html"
+            ><img src="media/img/proyecto-docker.png" alt="Proyecto Docker"
+          /></a>
+          <h3>Docker Media Lab</h3>
+          <p>
+            Despliegue automatizado de Jellyfin y servicios de red con Docker
+            Compose.
+          </p>
+        </article>
+        <article class="proyectos-card">
+          <a href="proyecto-godot.html"
+            ><img src="media/img/proyecto-godot.png" alt="Proyecto Godot"
+          /></a>
+          <h3>Godot Gunsmith</h3>
+          <p>
+            Prototipo de lógica de inventario y modificación de armas en tiempo
+            real.
+          </p>
+        </article>
+        <article class="proyectos-card">
+          <a href="proyecto-snippet.html"
+            ><img src="media/img/proyecto-snippet.png" alt="Proyecto Snippet"
+          /></a>
+          <h3>Snippet Vault</h3>
+          <p>
+            Concepto de herramienta para almacenamiento y clasificación de
+            código.
+          </p>
+        </article>
+      </section>
     </main>
     <footer>
-        <div class="footer-img">
-            <img src="media/img/logo_Toni_dev.png" alt="Logo ToniDev">
+      <div class="footer-img">
+        <img src="media/img/logo_Toni_dev.png" alt="Logo ToniDev" />
+      </div>
+      <div class="footer-div">
+        <nav class="nav-footer">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="redes">
+          <ul>
+            <li><img src="media/img/instagram.svg" alt="Icono instagram" /></li>
+            <li><img src="media/img/twitter.svg" alt="Icono twitter" /></li>
+            <li>
+              <a href="https://github.com/tonigstm96"
+                ><img src="media/img/github.svg" alt="Icono github"
+              /></a>
+            </li>
+          </ul>
         </div>
-        <div class="footer-div">
-            <nav class="nav-footer">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#sobre-mi">Sobre mí</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-            <div class="redes">
-                <ul>
-                    <li><img src="media/img/instagram.svg" alt="Icono instagram"></li>
-                    <li><img src="media/img/twitter.svg" alt="Icono twitter"></li>
-                    <li><a href="https://github.com/tonigstm96"><img src="media/img/github.svg" alt="Icono github"></a>
-                    </li>
-                </ul>
-            </div>
-            <h5>2026 © Antonio Gutiérrez Simón</h5>
-        </div>
+        <h5>2026 © Antonio Gutiérrez Simón</h5>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

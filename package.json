@@ -10,7 +10,11 @@
     "start": "npm run dev",
     "build": "docker run --rm --user \"$(id -u):$(id -g)\" -v \"$(pwd)\":/app -w /app php:8.2-cli php scripts/compile.php",
     "deploy": "gh-pages -d dist",
-    "publish": "npm run build && npm run deploy"
+    "publish": "npm run build && npm run deploy",
+    "fix:js": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "fix:php": "docker run --rm --user \"$(id -u):$(id -g)\" -v \"$(pwd)\":/data cytopia/php-cs-fixer fix .",
+    "fix": "concurrently \"npm run fix:js\" \"npm run fix:php\"",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -27,6 +31,9 @@
   "devDependencies": {
     "browser-sync": "^3.0.4",
     "concurrently": "^10.0.3",
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.7",
+    "prettier": "^3.8.4"
   }
 }
