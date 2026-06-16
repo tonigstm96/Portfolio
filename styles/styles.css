@@ -18,6 +18,14 @@ body {
     transparent 80%
   );
   background-attachment: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE y Edge */
+}
+
+/* Chrome, Safari y Opera */
+body::-webkit-scrollbar {
+  display: none;
 }
 
 ul {
@@ -526,6 +534,7 @@ h3 {
 @media (min-width: 1024px) {
   .quien-soy {
     width: 90%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
@@ -557,13 +566,19 @@ h3 {
 
   .tecnologias {
     grid-column: span 2;
-    width: 97.5vw;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
   }
 
   .tecnologias ul {
     justify-content: center;
     padding: 1.5rem;
     gap: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
   }
 
   .tecnologias ul li {

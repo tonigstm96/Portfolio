@@ -1,4 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const showSuccessAlert = (onConfirm) => {
+    Swal.fire({
+      title: "¡Mensaje enviado!",
+      text: "Gracias por ponerte en contacto. Te responderé lo antes posible.",
+      icon: "success",
+      confirmButtonColor: "#05F26C",
+      iconColor: "#05F26C",
+      background: "#132426",
+      color: "#ffffff",
+    }).then(() => {
+      if (typeof onConfirm === "function") {
+        onConfirm();
+      }
+    });
+  };
+
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get("success") === "1") {
+    showSuccessAlert();
+  }
+
   const form = document.querySelector(".formulario-contacto");
   if (!form) return;
 
@@ -62,15 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
     } else {
       event.preventDefault();
-      Swal.fire({
-        title: "¡Mensaje enviado!",
-        text: "Gracias por ponerte en contacto. Te responderé lo antes posible.",
-        icon: "success",
-        confirmButtonColor: "#05F26C",
-        iconColor: "#05F26C",
-        background: "#132426",
-        color: "#ffffff",
-      }).then(() => {
+      showSuccessAlert(() => {
+        const jsValInput = document.getElementById("js_validated");
+        if (jsValInput) jsValInput.value = "1";
         form.submit();
       });
     }
