@@ -83,11 +83,69 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
     } else {
       event.preventDefault();
-      showSuccessAlert(() => {
-        const jsValInput = document.getElementById("js_validated");
-        if (jsValInput) jsValInput.value = "1";
-        form.submit();
-      });
+
+      const FORMSPREE_ID = "xgobqlqj";
+
+      const isLocal =
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1";
+
+      if (isLocal) {
+        showSuccessAlert(() => {
+          const jsValInput = document.getElementById("js_validated");
+          if (jsValInput) jsValInput.value = "1";
+          form.submit();
+        });
+      } else {
+        const submitBtn = form.querySelector(".boton-enviar");
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Enviando...";
+        }
+
+        fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            nombre: inputs.nombre.value,
+            apellido: inputs.apellido.value,
+            correo: inputs.correo.value,
+            telefono: inputs.telefono.value,
+            mensaje: inputs.mensaje.value,
+          }),
+        })
+          .then((response) => {
+            if (response.ok) {
+              showSuccessAlert(() => {
+                form.reset();
+                if (submitBtn) {
+                  submitBtn.disabled = false;
+                  submitBtn.textContent = "Enviar";
+                }
+              });
+            } else {
+              throw new Error("Error en el envío.");
+            }
+          })
+          .catch((error) => {
+            console.error(error);
+            Swal.fire({
+              title: "Error",
+              text: "Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.",
+              icon: "error",
+              confirmButtonColor: "#ff4444",
+              background: "#132426",
+              color: "#ffffff",
+            });
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = "Enviar";
+            }
+          });
+      }
     }
   });
 
