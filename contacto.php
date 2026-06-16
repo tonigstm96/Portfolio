@@ -8,7 +8,7 @@ $correo = "";
 $telefono = "";
 $mensaje = "";
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
     $nombre = trim($_POST["nombre"] ?? "");
     $apellido = trim($_POST["apellido"] ?? "");
     $correo = trim($_POST["correo"] ?? "");
@@ -160,8 +160,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <nav class="nav-footer">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="index.html#proyectos">Proyectos</a></li>
             <li><a href="contacto.php">Contacto</a></li>
           </ul>
         </nav>
