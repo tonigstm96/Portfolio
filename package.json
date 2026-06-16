@@ -1,0 +1,32 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "php": "docker run --rm --name portfolio-php --user \"$(id -u):$(id -g)\" -v \"$(pwd)\":/app -w /app -p 127.0.0.1:8000:8000 php:8.2-cli php -S 0.0.0.0:8000",
+    "sync": "browser-sync start --proxy \"127.0.0.1:8000\" --files \"**/*.php, **/*.html, **/*.css, **/*.js\"",
+    "dev": "concurrently \"npm run php\" \"npm run sync\"",
+    "start": "npm run dev",
+    "build": "docker run --rm --user \"$(id -u):$(id -g)\" -v \"$(pwd)\":/app -w /app php:8.2-cli php scripts/compile.php",
+    "deploy": "gh-pages -d dist",
+    "publish": "npm run build && npm run deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonigstm96/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tonigstm96/Portfolio/issues"
+  },
+  "homepage": "https://github.com/tonigstm96/Portfolio#readme",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concurrently": "^10.0.3",
+    "gh-pages": "^6.3.0"
+  }
+}
