@@ -60,6 +60,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!isValid) {
       event.preventDefault();
+    } else {
+      event.preventDefault();
+      Swal.fire({
+        title: "¡Mensaje enviado!",
+        text: "Gracias por ponerte en contacto. Te responderé lo antes posible.",
+        icon: "success",
+        confirmButtonColor: "#05F26C",
+        iconColor: "#05F26C",
+        background: "#132426",
+        color: "#ffffff",
+      }).then(() => {
+        form.submit();
+      });
     }
   });
 
